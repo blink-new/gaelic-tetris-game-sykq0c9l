@@ -1,14 +1,14 @@
 import React from 'react';
 
-import I from '../assets/gaelic-faces/I.svg';
-import O from '../assets/gaelic-faces/O.svg';
-import T from '../assets/gaelic-faces/T.svg';
-import S from '../assets/gaelic-faces/S.svg';
-import Z from '../assets/gaelic-faces/Z.svg';
-import J from '../assets/gaelic-faces/J.svg';
-import L from '../assets/gaelic-faces/L.svg';
-
-const faceSvgs: Record<string, string> = { I, O, T, S, Z, J, L };
+const faceSvgs: Record<string, string> = {
+  I: new URL('../assets/gaelic-faces/I.svg', import.meta.url).href,
+  O: new URL('../assets/gaelic-faces/O.svg', import.meta.url).href,
+  T: new URL('../assets/gaelic-faces/T.svg', import.meta.url).href,
+  S: new URL('../assets/gaelic-faces/S.svg', import.meta.url).href,
+  Z: new URL('../assets/gaelic-faces/Z.svg', import.meta.url).href,
+  J: new URL('../assets/gaelic-faces/J.svg', import.meta.url).href,
+  L: new URL('../assets/gaelic-faces/L.svg', import.meta.url).href,
+};
 
 export function GaelicFace({ type, className = '' }: { type: string; className?: string }) {
   const src = faceSvgs[type];
